@@ -23,7 +23,6 @@ app.get('/hello', function(req, res){
 app.post('/api/fileanalyse', upload.single('upfile'), function(req,res, next){
   
   let file = req.file;
-  console.log(file);
   res.send({"name":file.originalname,"type":file.mimetype,"size":file.size})
 
 })
